@@ -1,0 +1,1 @@
+./main -camPos 0,17,120 -vdbIn /path/to/vdb/dir/bunny_cloud.vdb -exrOut /path/to/render/dir/bunny_cloud.exr -light env:0:1,1,1:1.0:20:/path/to/env/map/dir/ibl.exr -ptsPerKernel 2 -scatterScale 2 -scatterDensityScale 0.35 -scatterDensityMin 0.025 -densityScale 1 -iter 100 -samples 3;
