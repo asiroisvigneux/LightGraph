@@ -5,7 +5,7 @@
   <br>
   <a href="https://www.youtube.com/watch?v=BEbdy-7v5cE"><img src="https://img.youtube.com/vi/BEbdy-7v5cE/0.jpg" alt="IMAGE ALT TEXT"></a>
   <br><br>
-  <a href="https://drive.google.com/file/d/1gPweA_EjzZ-LnGEMgiLaPmhjSYhiB6nC/view?usp=sharing">Technical Paper</a>
+  <a href="https://drive.google.com/open?id=1mIu8JFknY5qCvWyRsmIovVxupaqxt5ED">Technical Paper</a>
   | <a href="https://www.youtube.com/watch?v=BEbdy-7v5cE">YouTube Video</a>
   <br><br>
 </div>
