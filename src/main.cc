@@ -61,7 +61,7 @@ const float MIN_DIST_MULT = 0.13;
 const uint32_t PC_SCATTER_COUNT = 1000000;
 const uint32_t GRAPH_MAX_CONNECT = 12;
 
-/// @brief Create a rotation matrix about the Y axis provided an rotation
+/// @brief Create a rotation matrix about the Y axis provided a rotation
 /// amount in degrees
 /// @param rotAmt   amount of rotation in degrees
 /// @return         returns a 4x4 matrix containing a 3x3 rotation matrix

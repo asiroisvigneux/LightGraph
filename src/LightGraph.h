@@ -50,12 +50,12 @@ public:
     /// @brief Constructor for the LightGraph iterations
     /// @param minDistVec          vector holding the minimum distance between
     ///                            each points of the point cloud (per thread)
-    /// @param scatterCount        number of point to thrown in the bbox
+    /// @param scatterCount        number of point to be thrown in the bbox
     /// @param bbox                bounding box of the density grid being rendered
     /// @param fastSampler         sampler object to query the density grid
     /// @param tempFastSampler     sampler object to query the temperature grid
-    /// @param rng                 thread safe random number generator
-    /// @param maxConnect          maximum number of connection per points in
+    /// @param rng                 thread-safe random number generator
+    /// @param maxConnect          maximum number of connections per points in
     ///                            the created graph
     /// @param grid                density grid being sampled
     /// @param opts                render settings
@@ -112,7 +112,7 @@ public:
                            uint32_t start,
                            uint32_t end) const;
 
-    /// @brief Ray march each edges of the graph to compute transmitance
+    /// @brief Ray march each edges of the graph to compute transmittance
     void raymarchConnection(const unique_ptr<bool[]> &graph,
                             vector<Vec3R> &pathGraph,
                             uint32_t pcSize,
@@ -197,7 +197,7 @@ void LightGraph::operator() ( const tbb::blocked_range<std::size_t> &r ) const {
 
 
 /// @brief Dart throwing of points inside the density bounding box
-/// @param pointCloud  array containing the postions of the point scattered in
+/// @param pointCloud  array containing the positions of the point scattered in
 ///                    the density grid
 /// @param minDist     minimum distance between each points while performing dart
 ///                    throwing
@@ -278,7 +278,7 @@ void LightGraph::scatterPoints(vector<Vec3R> &pointCloud,
 /// @param graph                       adjacency matrix of the LightGraph
 /// @param pcSize                      size of the point cloud scattered in the
 ///                                    density grid
-/// @param pointCloud                  array containing the postions of the point
+/// @param pointCloud                  array containing the positions of the point
 ///                                    scattered in the density grid
 /// @param searchRadiusConnectSquared  maximum search radius squared to create
 ///                                    connection
@@ -337,12 +337,12 @@ void LightGraph::printPartialGraph(const unique_ptr<float[]> &graph,
 }
 
 
-/// @brief Ray march each edges of the graph to compute transmitance
+/// @brief Ray march each edges of the graph to compute transmittance
 /// @param graph       adjacency matrix of the LightGraph
-/// @param pathGraph   symmetric matrix holding the resulting maximal transmitance
+/// @param pathGraph   symmetric matrix holding the resulting maximal transmittance
 ///                    between each pair of vertex
 /// @param pcSize      size of the point cloud scattered in the density grid
-/// @param pointCloud  array containing the postions of the point scattered in
+/// @param pointCloud  array containing the positions of the point scattered in
 ///                    the density grid
 void LightGraph::raymarchConnection(const unique_ptr<bool[]> &graph,
                           vector<Vec3R> &pathGraph,
@@ -544,8 +544,8 @@ void LightGraph::floydAlgo(vector<Vec3R> &graph, const uint32_t graphWidth) cons
 
 /// @brief Diffuse radiance in the graph according to the solution computed
 /// with shortest path finding
-/// @param pathGraph  symmetric matrix holding the resulting maximal transmitance
-///                   between each pair of vertex
+/// @param pathGraph  symmetric matrix holding the resulting maximal transmittance
+///                   between each pair of vertices
 /// @param lightPC    array containing the radiance of each vertex of the graph
 ///                   from direct lighting
 /// @param diffusePC  array containing the radiance of each vertex of the graph
@@ -593,7 +593,7 @@ void LightGraph::diffuseLight(vector<Vec3R> &pathGraph,
 ///                           scattered in the density grid
 /// @param graph              adjacency matrix of the LightGraph
 /// @param pathGraph          symmetric matrix holding the resulting maximal
-///                           transmitance between each pair of vertex
+///                           transmittance between each pair of vertex
 /// @param lightPointCloud    array containing the radiance of each vertex of
 ///                           the graph from direct lighting
 /// @param diffusePointCloud  array containing the radiance of each vertex of

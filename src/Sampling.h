@@ -6,7 +6,7 @@
 /// @brief This file contains some utility functions to sample and hdr
 /// texture in the context of environment lighting using importance sampling.
 ///
-/// @note Most of those functions comes directly from PBRT with very little
+/// @note Most of those functions come directly from PBRT with very little
 /// modifications: https://github.com/mmp/pbrt-v3
 
 
@@ -53,7 +53,7 @@ inline T Clamp(T val, U low, V high) {
 
 
 /// @brief Binary search in a 1d array
-/// @param size     dmention of the array
+/// @param size     dimensions of the array
 /// @param pred     condition to test against
 /// @return returns the index of the found position
 template <typename Predicate>
@@ -168,10 +168,10 @@ private:
 
 
 /// @brief Read an exr file and store the pixel values in a 2d array
-/// @param fileName file path ofthe exr to read
+/// @param fileName file path of the exr to read
 /// @param pixels   the 2d array to receive the pixel data
-/// @param width    the width of the image in pixel
-/// @param height   the hight of the image in pixel
+/// @param width    the width of the image in pixels
+/// @param height   the height of the image in pixels
 void readExr (const char fileName[],
        Imf::Array2D<Imf::Rgba> &pixels,
        int &width,

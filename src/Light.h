@@ -146,7 +146,7 @@ public:
     /// @param color        color of the light
     /// @param intensity    intensity of the light
     /// @param samples      number of times that the light will be sampled at render time
-    /// @param exrFile      texture file to used a illumination
+    /// @param exrFile      texture file to use as illumination
     EnvLight(const Mat4R &xform = Mat4R::identity(),
              const Vec3R &color = Vec3R(1),
              const float &intensity = 1.0,

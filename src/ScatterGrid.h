@@ -6,7 +6,7 @@
 /// @author Alexandre Sirois-Vigneux
 ///
 /// @brief This file is responsible for rasterizing the solved LightGraph point
-/// clouds into a low resolution multiple scattering grid.
+/// clouds into a low-resolution multiple scattering grid.
 
 
 #ifndef SRC_SCATTERGRID_H_
@@ -56,7 +56,7 @@ struct ScatterGrid {
 };
 
 /// @brief Iterate over all active voxels and store the estimated multiple
-/// scattering using a truncated gaussian kernel.
+/// scattering using a truncated Gaussian kernel.
 /// @param iter the current active voxel
 void ScatterGrid::operator()(const openvdb::Vec3fGrid::ValueOnIter& iter) const {
 
@@ -99,8 +99,8 @@ void ScatterGrid::operator()(const openvdb::Vec3fGrid::ValueOnIter& iter) const 
 
 /// @brief Create the scatter grid using the topology of the density grid as a
 /// template
-/// @param scatterGrid  null pointer to attached to the scatter grid once created
-/// @param grid         density grid previded as a topology ref
+/// @param scatterGrid  null pointer to be attached to the scatter grid once created
+/// @param grid         density grid provided as a topology ref
 /// @param opts         render settings
 void ScatterGrid::buildScatterGrid(openvdb::Vec3fGrid::Ptr scatterGrid,
                                    const openvdb::FloatGrid::Ptr grid,

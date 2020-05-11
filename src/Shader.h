@@ -35,7 +35,7 @@ public:
 
     /// @brief Define the color ramp to map temperature to color
     /// @param positions    a vector of position for the ramp between 0 and 1
-    /// @param colors       a vector of color associated with each positions
+    /// @param colors       a vector of color associated with each position
     /// @param in           remap this temperature value to 0 on the ramp
     /// @param out          remap this temperature value to 1 on the ramp
     ColorRamp(const vector<double> &positions,
@@ -93,10 +93,10 @@ public:
 };
 
 
-/// @brief Built in shader that can be modified by the user inputs. It supports
+/// @brief Built-in shader that can be modified by the user inputs. It supports
 /// vector values scattering, emission, color ramps for temperature remapping, a
 /// decoupled control over the density for primary, shadow and scattering
-/// contribution and more.
+/// contributions and more.
 class Shader {
 
 private:

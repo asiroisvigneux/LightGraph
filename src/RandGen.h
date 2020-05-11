@@ -3,7 +3,7 @@
 
 /// @file RandGen.h
 ///
-/// @brief This file defines a thread safe pseudo-random number generator that
+/// @brief This file defines a thread-safe pseudo-random number generator that
 /// will spawn a single instance of the generator per iterations so the results
 /// stays deterministic.
 
@@ -12,14 +12,14 @@
 #define SRC_RANDGEN_H_
 
 
-/// @brief Create a thread safe pseudo-random number generator
+/// @brief Create a thread-safe pseudo-random number generator
 class RandGen {
 
 public:
     typedef std::mt19937 Engine;
 
     /// @brief Create multiple instances of random number generator
-    /// @param iter number of instance to spawn
+    /// @param iter number of instances to spawn
     RandGen(const size_t &iter)
         : real_uni_dist_(0.0f, 1.0f)
         , engines()

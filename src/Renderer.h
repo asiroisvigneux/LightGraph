@@ -5,7 +5,7 @@
 ///
 /// @brief Multithreaded raytracer using a rasterized grid to account for the
 /// multiple scattering contribution. Also contains a Film and Perspective Camera
-/// class with a full frame sensor size.
+/// class with a full-frame sensor size.
 
 
 #ifndef OPENVDB_TOOLS_RAYTRACER_HAS_BEEN_INCLUDED
@@ -138,10 +138,10 @@ class PerspectiveCamera {
     /// @param translation  translation of the camera in world-space units,
     ///                     applied after rotation
     /// @param focalLength  focal length of the camera in mm
-    ///                     (the default of 50mm corresponds to Houdini's default camera)
+    ///                     (the default is 50mm)
     /// @param aperture     width in mm of the frame, i.e., the visible field
     ///                     (the default 41.2136 mm corresponds to Houdini's default camera)
-    /// @param nearPlane    depth of the near clipping plane in world-space units
+    /// @param nearPlane    depth of the near-clipping plane in world-space units
     /// @param farPlane     depth of the far clipping plane in world-space units
     /// @details If no rotation or translation is provided, the camera is placed
     /// at (0,0,0) in world space and points in the direction of the negative z axis.
@@ -301,7 +301,7 @@ public:
     /// @warning This copy constructor creates shallow copies of data
     /// members of the instance passed as the argument. For
     /// performance reasons we are not using shared pointers (their
-    /// mutex-lock impairs multi-threading).
+    /// mutex-lock impairs multithreading).
     VolumeRayIntersector(const VolumeRayIntersector& other)
         : mIsMaster(false)
         , mTree(other.mTree)//shallow copy
